@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .js {
+        font-weight: bold;
+        color: rgb(243, 75, 75);
+      }
+      #first {
+        color: rgb(131, 231, 131);
+      }
+      span {
+        color: rgb(92, 92, 238);
+      }
+    </style>
+    <title>WEB1 - JavaScript</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function nightDayHandler(self) {
+        var target = document.querySelector("body");
+        if (this.value === "night") {
+          target.style.backgroundColor = "black";
+          //Document.querySelector()는 제공한 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 Element를 반환합니다.
+          //일치하는 요소가 없으면 null을 반환합니다.
+          target.style.color = "white";
+          self.value = "day";
+
+          var alist = document.querySelectorAll("a"); // 페이지에 있는 모든 <a>태그를 가져온다
+          var i = 0;
+          while (i < alist.length) {
+            alist[i].style.color = "powderblue";
+            i++;
+          }
+        } else {
+          target.style.backgroundColor = "white";
+          target.style.color = "black";
+          self.value = "night";
+
+          var alist = document.querySelectorAll("a");
+          var i = 0;
+          while (i < alist.length) {
+            alist[i].style.color = "blue";
+            i++;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1><a href="https://opentutorials.org/course/3084">WEB</a></h1>
+
+    <input
+      id="night_day2"
+      type="button"
+      value="night"
+      onclick="
+    nightDayHandler(this);"
+    />
+    <h2 style="background-color: coral; color: rgb(20, 144, 216)">
+      JavaScript
+    </h2>
+    <p>
+      <span id="first" class="js">JavaScript</span> often abbreviated JS, is a
+      programming language that is one of the core technologies of the World
+      Wide Web, alongside <span>HTML</span> and <span>CSS</span> Over 97% of
+      websites use <span class="js">JavaScript</span> on the client side for web
+      page behavior,[12] often incorporating third-party libraries.[13] All
+      major web browsers have a dedicated
+      <span class="js">JavaScript</span> engine to execute the code on users'
+      devices. <span class="js">JavaScript</span> is a high-level, often
+      just-in-time compiled language that conforms to the ECMAScript
+      standard.[14] It has dynamic typing, prototype-based object-orientation,
+      and first-class functions. It is multi-paradigm, supporting event-driven,
+      functional, and imperative programming styles. It has application
+      programming interfaces (APIs) for working with text, dates, regular
+      expressions, standard data structures, and the Document Object Model
+      (DOM). The ECMAScript standard does not include any input/output (I/O),
+      such as networking, storage, or graphics facilities. In practice, the web
+      browser or other runtime system provides
+      <span class="js">JavaScript</span> APIs for I/O.
+      <span class="js">JavaScript</span> engines were originally used only in
+      web browsers, but are now core components of some servers and a variety of
+      applications. The most popular runtime system for this usage is Node.js.
+      Although Java and <span class="js">JavaScript</span> are similar in name,
+      syntax, and respective standard libraries, the two languages are distinct
+      and differ greatly in design.
+    </p>
+  </body>
+</html>
